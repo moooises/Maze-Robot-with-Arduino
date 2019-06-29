@@ -1,0 +1,38 @@
+Calibrar Sensor Blanco:
+	Precondición:
+	-El robot está colocado en una casilla blanca.
+
+	Escenario Principal:
+	1-El usuario pulsa el botón de calibrar de la interfaz.
+	2-La interfaz envia un mensaje al robot para avisarlo de que calibre el color blanco con los sensores.
+	3-El robot realizar una lectura con los sensores de color.
+	4-El robot hace la media de esos valores y lo almacena.
+	5-El robot envia una señal a la interfaz avisando de que el calibrado se ha realizado.
+	6-La interfaz muestra un mensaje avisando al usuario de que el proceso se ha realizado.
+
+Calibrar Sensor Negro:
+	Precondiciones:
+	-El robot está colocado sobre una casilla negra.
+	-Ya se ha calibrado el color blanco.
+
+	Escenario Principal:
+	1-El usuario pulsa el botón de calibrar de la interfaz.
+	2-La interfaz envia un mensaje al robot para avisarlo de que calibre el color negro con los sensores.
+	3-El robot realizar una lectura con los sensores de color.
+	4-El robot hace la media de esos valores y lo almacena.
+	5-El robot hace la media entre los valores blanco y negro para establecer un punto de separación entre ambos.
+	6-El robot envia una señal a la interfaz avisando de que el calibrado se ha realizado.
+	7-La interfaz muestra un mensaje avisando al usuario de que el proceso se ha realizado.
+
+Iniciar Robot:
+	Precondiciones:
+	-El robot se encuentra en la casilla de salida.
+	-Se han calibrado los colores blanco y negro.
+
+	Escenario Principal:
+	1-El usuario pulsa el botón Start en la interfaz.
+	2-La interfaz envia un mensaje al robot para avisarlo de que debe comenzar el recorrido del laberinto.
+	3-El robot envia datos a la interfaz de los muros que va detectando y de sus movimientos.
+	4-La interfaz actualiza la representación del laberinto con los datos que recibe del robot.
+	5-Cuando el robot ha terminado el recorrido, envia una señal a la interfaz avisando de que su ejecución ha concluido.
+	6-La interfaz muestra el mensaje de finalización al usuario.
